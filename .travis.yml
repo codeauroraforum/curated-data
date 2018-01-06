@@ -5,4 +5,8 @@ cache:
   directories:
     - "node_modules"
 
+before_script:
+  - "git log"
+  - "git diff --name-only --diff-filter=AM"
+
 script: npm run-script build
